@@ -16,6 +16,14 @@
 font-family: 'Open Sans', sans-serif;
 font-family: 'Raleway', sans-serif;
 }
+body{
+  
+overflow-x: hidden;
+}
+::selection{
+  background-color: #000;
+  color: #fff;
+}
 ul,li,h1,h2,h3,h4,h5,h6,p{
   margin: 0;
   padding: 0;
@@ -26,11 +34,44 @@ ul{
 a{
   text-decoration: none;
 }
+p{
+  line-height:1.2;
+  font-size: 14px;
+ color: #7e7b7b;
+}
 .button{
   padding: 12px 15px;
   border-radius: 15px;
   color: #ffffff;
+  text-transform: uppercase;
+  transition: all .2s ease-in;
 }
+.heading{
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+.heading h1{
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.heading p{
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #7e7b7b;
+  margin-bottom: 20px;
+}
+.heading > span{
+  width: 50px;
+  height: 2px;
+  background-color: #FF9B1A;
+  display: block;
+  margin: 0 auto;
+}
+
 /****************************
 
 ** Top Nav Section **
@@ -75,6 +116,23 @@ a{
 }
 .bottom-nav-section ul.navbar li{
   margin-left: 32px;
+  position: relative;
+}
+.bottom-nav-section ul.navbar li::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  transform: scale(0);
+  background-color: #FF9B1A;
+}
+.bottom-nav-section ul.navbar li:hover{
+transform: scale(1.25);
+}
+.bottom-nav-section ul.navbar li:hover::after{
+transform: scale(1);
 }
 .bottom-nav-section ul.navbar li a{
   color: #000;
@@ -85,4 +143,373 @@ a{
 .bottom-nav-section ul.navbar li a.navbar-btn.button{
   background-color: #FF9B1A;
   color: #fff;
+}
+/****************************
+
+** Hero Section **
+
+****************************/
+.hero-section{
+  background: url('../images/Banner_bg.jpg') no-repeat center center;
+  background-position: cover;
+  padding: 120px;
+  color: #EFEFEF;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+}
+.hero-section h1{
+  font-size: 55px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+.hero-section .hero-count{
+  padding: 40px 100px;
+  width: 70%;
+  margin: 0 auto;
+}
+.hero-section .hero-count span{
+  display: block;
+  font-weight: 500;
+}
+.hero-section .hero-count span.large-count{
+  font-weight: 700;
+  font-size: 22px;
+}
+.hero-section .hero-count span.small-count{
+  font-size: 14px;
+}
+.hero-section .hero-buttons a{
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 35px;
+}
+.hero-section .hero-buttons a.y-btn{
+  background-color: #FF9B1A;
+  border: 1px solid #FF9B1A;
+}
+.hero-section .hero-buttons a.y-btn:hover{
+  background-color: transparent;
+  border: 1px solid #EFEFEF;
+  color: #EFEFEF;
+}
+
+.hero-section .hero-buttons a.t-btn{
+  border: 1px solid #EFEFEF;
+}
+.hero-section .hero-buttons a.t-btn:hover{
+  background-color: #FF9B1A;
+  border: 1px solid #FF9B1A;
+  color: #EFEFEF;
+}
+/****************************
+
+** Feature Section **
+
+****************************/
+.feature-section{
+  background-color: #fff;
+  text-align: center;
+  padding: 100px 0;
+}
+.feature-section .feature{
+  border: 1px solid #c9c6c6;
+  border-radius: 10px;
+  padding: 50px 20px;
+}
+.feature-section .feature:hover {
+  color: #fff;
+  background-image: linear-gradient(to top, rgba(255, 156, 26,.7),rgba(240, 255, 26, 0.7)), url('../images/bitcoin.png');
+}
+
+.feature-section .feature:hover p{
+  color: #fff;
+}
+.feature-section .feature:hover .icon{
+  color: #fff;
+}
+.feature-section .feature .icon{
+ color: #FF9B1A;
+ font-size: 20px;
+ font-weight: 400;
+}
+.feature-section .feature h4{
+ margin: 30px 0 10px;
+ font-size: 18px;
+}
+
+
+/****************************
+
+** Service Section **
+
+****************************/
+.service-section{
+text-align: center;
+padding-bottom: 80px;
+}
+.service-section .service img{
+width: 100px;
+height: 100px;
+margin-bottom: 20px;
+}
+.service-section .service h2{
+margin-bottom: 20px;
+font-size: 23px;
+font-weight: 700;
+}
+.service-section .view-more{
+margin-top: 80px;
+}
+.service-section .service-btn{
+border: 1px solid #000;
+color: #000;
+font-weight: 700;
+font-size: 12px;
+}
+.service-section .service-btn:hover{
+border: 1px solid #FF9B1A;
+background-color: #FF9B1A;
+color: #fff;
+}
+
+/****************************
+
+** Buy and Sell Section **
+
+****************************/
+.buy-and-sell-section{
+  padding: 80px 70px 0;
+  background-image:linear-gradient(to Bottom, rgba(0,0,0,0.45),rgba(0,0,0,0.45)), url('../images/bitcoin_blur.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.buy-and-sell-section .buy-image{
+ position: relative;
+ padding-right: 70px;
+ text-align: right;
+
+}
+.buy-and-sell-section .buy-image img[alt="logo"]{
+ position: absolute;
+ top: 55%;
+ left: 40%;
+ transform:scale(4), translate(-50%,-50%);
+}
+
+.buy-and-sell-section .buy-content > .heading{
+  width: 100%;
+  font-size: 30px;
+  text-align: left;
+}
+.buy-and-sell-section .buy-content > .heading span{
+  margin: 0;
+}
+.buy-and-sell-section .buy-content > ul > li {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+.buy-and-sell-section .buy-content > ul > li > span.border{
+  width: 70px;
+  height: 70px;
+  display: block;
+  border: 1px solid #FF9B1A !important;
+  background-color: transparent !important;
+  transform: rotate(45deg);
+  margin-right: 20px;
+}
+.buy-and-sell-section .buy-content > ul > li h3{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-right: 50px;
+}
+.buy-and-sell-section .buy-content > ul > li p{
+  color: #fff;
+}
+
+/****************************
+
+** Counter Section **
+
+****************************/
+.counter-section{
+  padding: 40px 0;
+  background-color: #FF9B1A;
+  color: #fff;
+  text-align: center;
+}
+.counter-section .count{
+  padding: 0 40px;
+  background-color: #FF9B1A;
+  color: #fff;
+}
+.counter-section .count h2{
+ font-size: 45px;
+ margin-bottom: 10px;
+ font-weight: 700;
+}
+
+/****************************
+
+** Exhibition Section **
+
+****************************/
+.exhibition-section{
+  padding: 100px 0;
+}
+.exhibition-section .btc{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.exhibition-section .btc img{
+  padding: 35px 10px;
+}
+.exhibition-section .btc .box-1{
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+.exhibition-section .btc .box-2{
+  position: absolute;
+  top: 40%;
+  left: 0;
+}
+.exhibition-section .btc .box-3{
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+.exhibition-section .btc .box-4{
+  position: absolute;
+  top: 0;
+  right: 10%;
+}
+.exhibition-section .btc .box-5{
+  position: absolute;
+  top: 40%;
+  right: 0;
+}
+.exhibition-section .btc .box-6{
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+}
+.exhibition-section .btc .feature-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.exhibition-section .btc .feature-box.color-red{
+ color: rgb(255, 0, 0,.55);
+}
+.exhibition-section .btc .feature-box.color-green{
+ color: rgb(0, 128, 0,.55);
+}
+.exhibition-section .btc .feature-box.color-blue{
+ color: rgb(0, 0, 255,.55);
+}
+.exhibition-section .btc .feature-box span{
+  width: 25px;
+  height:25px;
+  transform: scale(1.2);
+  position: relative;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.exhibition-section .btc .feature-box strong{
+  font-size: 20px;
+  color:#7e7b7b;
+}
+.exhibition-section .btc .feature-box span:before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+}
+.exhibition-section .btc .feature-box.color-red span:before{
+  border: 1px solid rgb(255, 0, 0,.55);;
+ }
+.exhibition-section .btc .feature-box.color-green span:before{
+  border: 1px solid rgb(0, 128, 0,.55);;
+ }
+.exhibition-section .btc .feature-box.color-blue span:before{
+  border: 1px solid rgb(0, 0, 255,.55);
+ }
+
+/****************************
+
+** Experts Section **
+
+****************************/
+.experts-section{
+  padding: 20px 20px 60px;
+}
+.experts-section .expert{
+  padding: 20px;
+  text-align: center;
+}
+.experts-section .expert img{
+  width: 85%;
+  height: 340px;
+  margin-bottom: 30px;
+}
+.experts-section .expert h3{
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+.experts-section .expert span{
+  color: #FF9B1A;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/****************************
+
+** Consultation Section **
+
+****************************/
+.consultation-section{
+  padding: 80px 0;
+  background: url('../images/contact_bg.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #EFEFEF;
+}
+.consultation-section form{
+text-align: center;
+}
+.consultation-section input, .consultation-section textarea{
+  width: 100%;
+  padding: 10px;
+  color: #EFEFEF;
+  background-color: transparent;
+  border: 1px solid #EFEFEF;
+  margin-bottom: 20px;
+}
+.consultation-section input::placeholder, .consultation-section textarea::placeholder{
+  color: #EFEFEF;
+}
+.consultation-section textarea{
+  max-height: 700px;
+}
+.consultation-section .send{
+  background-color: #FF9B1A;
+  color: #ffffff;
+  border: 0;
+  width: 120px;
+  margin-top: 50px; 
 }
