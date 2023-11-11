@@ -1,14 +1,13 @@
 @media screen and (max-width:1120px){
 /****************************
 
-** Top Nav Section **
+** Bottom Nav Section **
 
 ****************************/
 .bottom-nav-section{
  display: flex;
  justify-content: space-around;
  align-items: center;
- 
 }
 .bottom-nav-section ul.navbar{
   position: absolute;
@@ -33,16 +32,69 @@ gap: 5px;
 cursor: pointer;
 }
 }
+@media screen and (max-width:1024px){
+/****************************
+
+** Top Nav Section **
+
+****************************/
+.exhibition-section .btc img{
+  width: 55%;
+}
+.footer-bottom .nav-res{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.footer-bottom .nav-res ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+}
+@media screen and (max-width:790px){
+  /****************************
+  
+  ** Top Nav Section **
+  
+  ****************************/
+  .top-nav-section .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .exhibition-section .btc img{
+    width: 45%;
+  }
+  .footer-bottom .nav-res{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .footer-bottom .nav-res ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  }
 @media screen and (max-width:720px){
   /****************************
   
   ** Hero Section **
   
   ****************************/
-  .hero-section{
-    display: block;
-    overflow: hidden;
-  }
   .hero-buttons a{
     display: block;
     width: 120px;
